@@ -137,7 +137,7 @@ lily.greet === rose.greet // false
 
 We want their greet methods to be the same! Next, we'll see how to avoid creating an entirely new `greet` method every time we make a new person.
 
-<img src="https://media.giphy.com/media/10nccX8vZPEeA0/giphy.gif" alt="greeting person gif" width="50%">
+<hr>
 
 By adding the method `greet` to the constructor's **prototype** we can enable all people to share a `greet` method, or any other method for that matter! Shared attributes can also be added to the prototype, but they're less common.  The prototype is simply an object that can be referenced by all the person instances.
 
