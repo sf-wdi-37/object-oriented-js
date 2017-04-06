@@ -106,6 +106,74 @@ console.log("real age: ", grandpa._realAge);  // undefined
 console.log("'age': ",grandpa.getAge());  // 62 :D
 ```
 
+
+## Prototypes
+
+```javascript
+function Person(name, age) {
+    this.name = name;
+    this.age = age;
+    this.nice = true;
+    this.greet = function() {
+      if (this.nice){
+        console.log(`Hello, I'm ${this.name}!`);
+      } else {
+        console.log("GO AWAY!");
+      }
+    }
+}
+```
+
+
+
+People can now be created with unique attributes, which is awesome. On the other hand, you may notice that all people could share the `greet` method. Right now, though, each person instance has a separate greet method.
+
+```javascript
+var lily = new Person("Lily");
+var rose = new Person("Role");
+
+lily.greet === rose.greet // false
+```
+
+We want their greet methods to be the same! Next, we'll see how to avoid creating an entirely new `greet` method every time we make a new person.
+
+<img src="https://media.giphy.com/media/10nccX8vZPEeA0/giphy.gif" alt="greeting person gif" width="50%">
+
+By adding the method `greet` to the constructor's **prototype** we can enable all people to share a `greet` method, or any other method for that matter! Shared attributes can also be added to the prototype, but they're less common.  The prototype is simply an object that can be referenced by all the person instances.
+
+```javascript
+function Person(name, age) {
+    this.name = name;
+    this.age = age;
+    this.nice = true;
+}
+
+Person.prototype.greet = function() {
+  if (this.nice){
+    console.log(`Hello, I'm ${this.name}!`);
+  } else {
+    console.log("GO AWAY!");
+  }
+}
+```
+
+Now try running the same test from above to see if both people share the same `greet` method.
+
+```javascript
+var lily = new Person("Lily");
+var rose = new Person("Rose");
+
+lily.greet === rose.greet // true
+```
+
+#### Benefits
+
+- Less wasted memory
+- Single source of truth
+
+>What if we edit the prototype *after* the person instances have been created? Will they update their behavior accordingly?
+
+
 ## Constructor and Prototype Review
 
 **Constructors**
