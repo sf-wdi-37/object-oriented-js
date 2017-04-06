@@ -5,7 +5,7 @@ Location: SF
 
 ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
 
-#Object Oriented Programming in JavaScript
+# Object Oriented Programming in JavaScript
 
 ### Why is this important?
 <!-- framing the "why" in big-picture/real world examples -->
@@ -31,10 +31,10 @@ Object oriented programming is a common pattern throughout many languages. Its p
 
 ## Programming Paradigms
 
-<!--
+
 ![XKCD goto](https://imgs.xkcd.com/comics/goto.png)
 *Dev culture reference: 'goto considered harmful.' Google it LATER.*
--->
+
 
 We've been working with **procedural programming**, putting blocks of code in functions (aka procedures) that we call at various points in the code.
 
