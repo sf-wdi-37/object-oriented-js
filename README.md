@@ -19,7 +19,6 @@ Object oriented programming is a common pattern throughout many languages. Its p
 
 - Build practical and useful objects using Javascript constructors
 - Design object types in JavaScript using Object Oriented Programming techniques
-- Describe prototypal inheritance
 
 
 ### Where should we be now?
